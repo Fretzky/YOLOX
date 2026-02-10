@@ -223,7 +223,7 @@ class COCOEvaluator:
             bboxes /= scale
             cls = output[:, 6]
             scores = output[:, 4] * output[:, 5]
-
+            
             image_wise_data.update({
                 int(img_id): {
                     "bboxes": [box.numpy().tolist() for box in bboxes],
