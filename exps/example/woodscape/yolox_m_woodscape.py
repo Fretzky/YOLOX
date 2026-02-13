@@ -21,9 +21,9 @@ class Exp(MyExp):
         self.exp_name = os.path.split(os.path.realpath(__file__))[1].split(".")[0]
          
         self.nmsthre = 0.65 # default from pretrained model
-   
+        self.conf_thre = 0.01
         # Define yourself dataset path
-        self.data_dir = os.environ.get("WOODSCAPE_COCO_DIR", "/app/data/woodscape_coco2")
+        self.data_dir = os.environ.get("WOODSCAPE_COCO_DIR", "/app/data/woodscape_coco")
         self.train_ann = "train.json"
         self.val_ann = "val.json"
    
